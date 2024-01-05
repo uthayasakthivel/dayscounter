@@ -1,13 +1,15 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.countdown-item {
+    @apply flex-1 bg-white shadow-[0_0_5px_rgba(0,0,0,0.1)] p-2.5 rounded-[5px]
+  }
+  
+  .countdown-item-para {
+    @apply text-xl m-0;
+  }
+  
+  .countdown-item-span {
+    @apply text-xs text-[#888];
+  }

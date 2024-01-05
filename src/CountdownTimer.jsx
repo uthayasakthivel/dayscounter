@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import "./CountdownTimer.css"
+// import "./CountdownTimer.css"
 const CountdownTimer = ({ date }) => {
   const targetDate = new Date(date) // convert the object type from 'js obj' to 'Date object'
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining())
@@ -32,27 +32,27 @@ const CountdownTimer = ({ date }) => {
 
   return (
     <div>
-      <div className="countdown-container">
-        <h1 className="countdown-title">Countdown Timer</h1>
-        <p className="countdown-subtitle">
+      <div className="text-center bg-neutral-100 shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[800px] my-[50px] p-5 rounded-[10px]">
+        <h1 className="text-2xl text-[#333] mb-2.5">DayCount Master</h1>
+        <p className="text-base text-[#666] mb-5 countdown-subtitle">
           Time remaining until {targetDate.toDateString()}:
         </p>
-        <div className="countdown-timer">
+        <div className="flex justify-between gap-5">
           <div className="countdown-item">
-            <p>{timeRemaining.days}</p>
-            <span>Days</span>
+            <p className="countdown-item-para">{timeRemaining.days}</p>
+            <span className="countdown-item-span">Days</span>
           </div>
           <div className="countdown-item">
-            <p>{timeRemaining.hours}</p>
-            <span>Hours</span>
+            <p className="countdown-item-para">{timeRemaining.hours}</p>
+            <span className="countdown-item-span">Hours</span>
           </div>
           <div className="countdown-item">
-            <p>{timeRemaining.minutes}</p>
-            <span>Minutes</span>
+            <p className="countdown-item-para">{timeRemaining.minutes}</p>
+            <span className="countdown-item-span">Minutes</span>
           </div>
           <div className="countdown-item">
-            <p>{timeRemaining.seconds}</p>
-            <span>Seconds</span>
+            <p className="countdown-item-para">{timeRemaining.seconds}</p>
+            <span className="countdown-item-span">Seconds</span>
           </div>
         </div>
       </div>
