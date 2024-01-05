@@ -32,12 +32,12 @@ const CountdownTimer = ({ date }) => {
 
   return (
     <div>
-      <div className="text-center bg-neutral-100 shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[800px] my-[50px] p-5 rounded-[10px]">
+      <div className="text-center bg-neutral-100 shadow-[0_0_10px_rgba(0,0,0,0.1)]  my-0 mx-12 md:m-12  p-5 rounded-[10px]">
         <h1 className="text-2xl text-[#333] mb-2.5">DayCount Master</h1>
         <p className="text-base text-[#666] mb-5 countdown-subtitle">
           Time remaining until {targetDate.toDateString()}:
         </p>
-        <div className="flex justify-between gap-5">
+        <div className="flex justify-between gap-5 flex-wrap">
           <div className="countdown-item">
             <p className="countdown-item-para">{timeRemaining.days}</p>
             <span className="countdown-item-span">Days</span>
